@@ -1,6 +1,5 @@
 import ContactForm from './ContactForm.jsx';
 import Icon from './Icon.jsx';
-import contactVideo from '../assets/videos/aaa-vid2.mp4';
 
 const contactItems = [
   { icon: 'phone', label: 'Call Tony', detail: '084 751 1475', href: 'tel:+27847511475' },
@@ -19,42 +18,35 @@ export default function ContactSection() {
             <h2>Need a plumber? <em>Get in touch.</em></h2>
             <p>Tell us what you need and where you are. For urgent plumbing assistance, call anytime.</p>
           </div>
-          <div className="contact-showcase">
-            <div className="contact-layout">
-              <aside className="contact-aside">
-                <p className="eyebrow eyebrow-light">REACH OUT DIRECTLY</p>
-                <h3>Here when you need us.</h3>
-                <p className="contact-aside-copy">Talk to Tony about plumbing repairs, a new installation or an urgent issue.</p>
-                <div className="contact-cards">
-                  {contactItems.map((item) => (
-                    <a
-                      className="contact-card"
-                      href={item.href}
-                      key={item.label}
-                      target={item.external ? '_blank' : undefined}
-                      rel={item.external ? 'noreferrer' : undefined}
-                    >
-                      <span className="contact-card-icon"><Icon name={item.icon} size={19} /></span>
-                      <span><small>{item.label}</small><strong>{item.detail}</strong></span>
-                      <Icon name="arrow" size={17} />
-                    </a>
-                  ))}
-                </div>
-                <div className="hours-note"><Icon name="clock" size={19} /><span><strong>Open 24 hours</strong><small>Emergency plumbing availability</small></span></div>
-              </aside>
-              <div className="form-panel">
-                <div className="form-panel-heading">
-                  <span className="form-step">01 <i>/ ENQUIRY</i></span>
-                  <h3>How can we help?</h3>
-                  <p>Fields marked <span aria-hidden="true">*</span> are required.</p>
-                </div>
-                <ContactForm />
+          <div className="contact-layout">
+            <aside className="contact-aside">
+              <p className="eyebrow eyebrow-light">REACH OUT DIRECTLY</p>
+              <h3>Here when you need us.</h3>
+              <p className="contact-aside-copy">Talk to Tony about plumbing repairs, a new installation or an urgent issue.</p>
+              <div className="contact-cards">
+                {contactItems.map((item) => (
+                  <a
+                    className="contact-card"
+                    href={item.href}
+                    key={item.label}
+                    target={item.external ? '_blank' : undefined}
+                    rel={item.external ? 'noreferrer' : undefined}
+                  >
+                    <span className="contact-card-icon"><Icon name={item.icon} size={19} /></span>
+                    <span><small>{item.label}</small><strong>{item.detail}</strong></span>
+                    <Icon name="arrow" size={17} />
+                  </a>
+                ))}
               </div>
-            </div>
-            <div className="contact-video">
-              <video autoPlay muted loop playsInline aria-hidden="true" tabIndex="-1" preload="metadata">
-                <source src={contactVideo} type="video/mp4" />
-              </video>
+              <div className="hours-note"><Icon name="clock" size={19} /><span><strong>Open 24 hours</strong><small>Emergency plumbing availability</small></span></div>
+            </aside>
+            <div className="form-panel">
+              <div className="form-panel-heading">
+                <span className="form-step">01 <i>/ ENQUIRY</i></span>
+                <h3>How can we help?</h3>
+                <p>Fields marked <span aria-hidden="true">*</span> are required.</p>
+              </div>
+              <ContactForm />
             </div>
           </div>
         </div>

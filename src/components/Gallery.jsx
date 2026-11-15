@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import { galleryImages } from '../data/gallery.js';
+import { comparisonPairs, galleryImages } from '../data/gallery.js';
 import Icon from './Icon.jsx';
+import BeforeAfterSlider from './BeforeAfterSlider.jsx';
 
 export default function Gallery() {
   const [activeImage, setActiveImage] = useState(null);
@@ -28,7 +29,7 @@ export default function Gallery() {
             <p className="eyebrow">A CLOSER LOOK</p>
             <h2>Work built on <em>care.</em></h2>
           </div>
-          <p>Thoughtful plumbing, practical solutions and quality finishes for homes and businesses across the West Coast. Illustrative stock photos are shown here until project photos are added.</p>
+          <p>Thoughtful plumbing, practical solutions and quality finishes for homes and businesses across the West Coast. Browse the project comparisons below to see work before and after completion.</p>
         </div>
         <div className="gallery-grid">
           {galleryImages.map((image, index) => (
@@ -42,6 +43,14 @@ export default function Gallery() {
               <img src={image.src} alt={image.alt} loading="lazy" />
               <span className="gallery-caption">{image.label}<Icon name="arrow" size={18} /></span>
             </button>
+          ))}
+        </div>
+        <div className="gallery-comparisons">
+          {comparisonPairs.map((pair) => (
+            <article className="gallery-comparison-card" key={pair.title}>
+              <BeforeAfterSlider {...pair} />
+              <h3>{pair.title}</h3>
+            </article>
           ))}
         </div>
       </div>

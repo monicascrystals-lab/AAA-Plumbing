@@ -3,14 +3,7 @@ import Gallery from './Gallery.jsx';
 import { services, serviceAreas } from '../data/services.js';
 import { reviews } from '../data/reviews.js';
 import aboutImage from '../assets/images/aaa-plumbing-1.png';
-
-const videos = import.meta.glob('../assets/videos/*.{mp4,webm}', {
-  eager: true,
-  query: '?url',
-  import: 'default',
-});
-
-const videoUrl = Object.values(videos)[1];
+import areasVideo from '../assets/videos/aaa-vid2.mp4';
 
 export default function ContentSections() {
   return (
@@ -91,34 +84,6 @@ export default function ContentSections() {
 
       <Gallery />
 
-      <section className="video-section section" aria-labelledby="video-heading">
-        <div className="container video-layout">
-          <div className="video-copy">
-            <p className="eyebrow">ON THE JOB</p>
-            <h2 id="video-heading">A look at the work <em>behind the fix.</em></h2>
-            <p>We’ll share a closer look at plumbing work and installations here. Have a question about a project? Get in touch.</p>
-            <a className="text-link" href="#contact">Ask us a question <Icon name="arrow" size={18} /></a>
-          </div>
-          {videoUrl ? (
-            <div className="video-frame">
-              <video controls playsInline preload="metadata" poster="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1200&q=85">
-                <source src={videoUrl} />
-                Your browser does not support embedded video.
-              </video>
-            </div>
-          ) : (
-            <div className="video-placeholder">
-              <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1200&q=85" alt="" loading="lazy" />
-              <div className="video-placeholder-overlay">
-                <span className="play-badge"><span aria-hidden="true">▶</span></span>
-                <strong>Work videos coming soon</strong>
-                <small>Add a video to <code>src/assets/videos/</code> to display it here.</small>
-              </div>
-            </div>
-          )}
-        </div>
-      </section>
-
       <section className="reviews-section section" id="reviews">
         <div className="container">
           <div className="section-heading heading-row">
@@ -139,6 +104,10 @@ export default function ContentSections() {
       </section>
 
       <section className="areas-section section" id="areas">
+        <video className="areas-video" autoPlay muted loop playsInline aria-hidden="true" tabIndex="-1" preload="metadata">
+          <source src={areasVideo} type="video/mp4" />
+        </video>
+        <div className="areas-video-overlay" aria-hidden="true" />
         <div className="container areas-layout">
           <div className="areas-copy">
             <p className="eyebrow eyebrow-light">LOCAL SERVICE, WEST COAST</p>
