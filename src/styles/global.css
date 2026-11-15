@@ -118,12 +118,7 @@ p { line-height: 1.7; }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(55px, 9vw, 120px); }
 .about-visual { position: relative; min-height: 490px; }
 .about-visual::before { position: absolute; top: -18px; left: -18px; width: 41%; height: 41%; border-top: 1px solid #96b6c4; border-left: 1px solid #96b6c4; content: ''; }
-.about-visual img { width: 100%; height: 490px; object-fit: cover; object-position: center; }
-.about-photo-label { position: absolute; bottom: 24px; left: 0; display: flex; align-items: center; gap: 11px; padding: 12px 17px; color: white; background: var(--navy); font-size: .63rem; font-weight: 700; letter-spacing: .12em; }
-.label-rule { width: 20px; height: 1px; background: #8ab3c5; }
-.about-badge { position: absolute; right: -25px; bottom: 47px; display: flex; width: 122px; height: 122px; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: white; background: var(--blue); box-shadow: 0 12px 30px rgba(15,45,61,.18); }
-.about-badge strong { font-family: var(--heading); font-size: 2.25rem; letter-spacing: -.07em; }
-.about-badge span { font-size: .55rem; line-height: 1.45; font-weight: 700; letter-spacing: .08em; text-align: center; }
+.about-visual img { width: 100%; height: 490px; object-fit: contain; object-position: center; }
 .about-copy h2 { max-width: 520px; }
 .about-intro { margin-bottom: 12px; color: var(--navy); font-size: 1.05rem; font-weight: 600; line-height: 1.6; }
 .about-copy > p:not(.eyebrow):not(.about-intro) { color: var(--muted); font-size: .91rem; }
@@ -354,7 +349,6 @@ p { line-height: 1.7; }
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
   .about-visual { width: min(100% - 16px, 570px); min-height: 405px; }
   .about-visual img { height: 405px; }
-  .about-badge { right: -16px; }
   .about-copy { max-width: 620px; }
   .heading-row { align-items: flex-start; flex-direction: column; gap: 15px; }
   .heading-row > p { max-width: 530px; margin-bottom: 0; }
@@ -405,10 +399,6 @@ p { line-height: 1.7; }
   .about-grid { gap: 40px; }
   .about-visual { width: calc(100% - 12px); min-height: 330px; }
   .about-visual img { height: 330px; }
-  .about-photo-label { bottom: 15px; padding: 10px 12px; font-size: .52rem; }
-  .about-badge { right: -12px; bottom: 36px; width: 93px; height: 93px; }
-  .about-badge strong { font-size: 1.8rem; }
-  .about-badge span { font-size: .48rem; }
   .about-credentials { grid-template-columns: 1fr; gap: 10px; }
   .services-grid { grid-template-columns: 1fr; gap: 10px; }
   .service-card { min-height: auto; padding: 20px; }

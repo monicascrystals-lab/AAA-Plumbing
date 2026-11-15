@@ -2,6 +2,7 @@ import Icon from './Icon.jsx';
 import Gallery from './Gallery.jsx';
 import { services, serviceAreas } from '../data/services.js';
 import { reviews } from '../data/reviews.js';
+import aboutImage from '../assets/images/aaa-plumbing-1.png';
 
 const videos = import.meta.glob('../assets/videos/*.{mp4,webm}', {
   eager: true,
@@ -18,12 +19,10 @@ export default function ContentSections() {
         <div className="container about-grid">
           <div className="about-visual">
             <img
-              src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85"
-              alt="Carefully finished residential interior with modern fixtures"
+              src={aboutImage}
+              alt="AAA Plumbing & All"
               loading="lazy"
             />
-            <div className="about-photo-label"><span className="label-rule" /> LOCAL KNOW-HOW. PRACTICAL WORK.</div>
-            <div className="about-badge"><strong>24/7</strong><span>EMERGENCY<br />AVAILABILITY</span></div>
           </div>
           <div className="about-copy">
             <p className="eyebrow">ABOUT AAA PLUMBING &amp; ALL</p>

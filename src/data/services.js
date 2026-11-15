@@ -29,11 +29,6 @@ export const services = [
     title: 'Bathroom & kitchen renovations',
     description: 'Plumbing for bathroom and kitchen renovations, upgrades and remodels.',
   },
-  {
-    icon: 'home',
-    title: 'New builds',
-    description: 'Plumbing installations for new residential and commercial building projects.',
-  },
 ];
 
 export const serviceAreas = [
