@@ -29,7 +29,6 @@ export default function Gallery() {
             <p className="eyebrow">A CLOSER LOOK</p>
             <h2>Work built on <em>care.</em></h2>
           </div>
-          <p>Thoughtful plumbing, practical solutions and quality finishes for homes and businesses across the West Coast. Browse the project comparisons below to see work before and after completion.</p>
         </div>
         <div className="gallery-grid">
           {galleryImages.map((image, index) => (

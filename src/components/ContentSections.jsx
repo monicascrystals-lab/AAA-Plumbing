@@ -36,7 +36,6 @@ export default function ContentSections() {
         <div className="container">
           <div className="section-heading heading-row">
             <div><p className="eyebrow">WHAT WE CAN HELP WITH</p><h2>Plumbing solutions, <em>all in one place.</em></h2></div>
-            <p>From a small repair to a new project, talk to us about the right plumbing service for your property.</p>
           </div>
           <div className="services-grid">
             {services.map((service, index) => (

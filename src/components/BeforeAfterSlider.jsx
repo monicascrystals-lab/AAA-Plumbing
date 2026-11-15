@@ -104,8 +104,6 @@ export default function BeforeAfterSlider({
           </svg>
         </span>
       </div>
-      <span className="before-after-label before-after-label-left">Before</span>
-      <span className="before-after-label before-after-label-right">After</span>
     </div>
   );
 }
